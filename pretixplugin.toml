@@ -1,0 +1,5 @@
+[plugin]
+package = "pretix-abimania-theme"
+modules = [ "pretix_abimania_theme" ]
+marketplace_name = "abimania-theme"
+

@@ -1,0 +1,42 @@
+[project]
+name = "pretix-abimania-theme"
+dynamic = ["version"]
+description = "Style for Abimania"
+readme = "README.rst"
+license = {text = "Apache"}
+keywords = ["pretix"]
+authors = [
+    {name = "Filip Zelinskyi", email = "filip@zelinskyi.de"},
+]
+maintainers = [
+    {name = "Filip Zelinskyi", email = "filip@zelinskyi.de"},
+]
+
+dependencies = [
+]
+
+[project.entry-points."pretix.plugin"]
+pretix_abimania_theme = "pretix_abimania_theme:PretixPluginMeta"
+
+[project.entry-points."distutils.commands"]
+build = "pretix_plugin_build.build:CustomBuild"
+
+[build-system]
+requires = [
+    "setuptools",
+    "pretix-plugin-build",
+]
+
+[project.urls]
+homepage = "https://github.com/nau7ilus/pretix-abimania-theme"
+repository = "https://github.com/nau7ilus/pretix-abimania-theme"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "pretix_abimania_theme.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["pretix*"]
+namespaces = false
