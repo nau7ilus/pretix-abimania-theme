@@ -161,6 +161,7 @@
 
 /* Page Header */
 .page-header {
+    cursor: pointer;
     position: relative;
     height: 13rem;
     background-size: cover;

@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const headerImage = document.querySelector('.event-logo')
     headerImage.remove()
 
+    pageHeader.addEventListener("click", function () {
+        window.location.href = '/';
+    });
+
     const pillarTop = document.createElement('div')
     pillarTop.classList.add('pillar-top')
     pageHeader.before(pillarTop)
