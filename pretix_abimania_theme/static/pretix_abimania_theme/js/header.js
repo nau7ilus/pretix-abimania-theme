@@ -1,11 +1,21 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
+    const mainBox = document.querySelector('.main-box')
+
     const pageHeader = document.querySelector('.page-header')
-
     const headerImage = document.querySelector('.event-logo')
-
     headerImage.remove()
+
+    const pillarTop = document.createElement('div')
+    pillarTop.classList.add('pillar-top')
+    pageHeader.before(pillarTop)
+
+    const pillarBottom = document.createElement('div')
+    pillarBottom.classList.add('pillar-bottom')
+    mainBox.appendChild(pillarBottom)
+
+
     // headerImage.src = '/static/pretix_abimania_theme/images/header_background.jpg';
 
 
