@@ -25,6 +25,8 @@ build = "pretix_plugin_build.build:CustomBuild"
 requires = [
     "setuptools",
     "pretix-plugin-build",
+    "pretix",
+    "django"
 ]
 
 [project.urls]
