@@ -3,6 +3,19 @@
 document.addEventListener('DOMContentLoaded', function () {
     const mainBox = document.querySelector('.main-box')
 
+    const updatePseudoHeight = () => {
+        const mainBoxHeight = mainBox.offsetHeight;
+        mainBox.style.setProperty('--pseudo-height', `${mainBoxHeight}px`);
+    };
+
+    updatePseudoHeight();
+
+    const resizeObserver = new ResizeObserver(() => {
+        updatePseudoHeight();
+    });
+
+    resizeObserver.observe(mainBox);
+
     const pageHeader = document.querySelector('.page-header')
     const headerImage = document.querySelector('.event-logo')
     headerImage.remove()
@@ -14,11 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const pillarBottom = document.createElement('div')
     pillarBottom.classList.add('pillar-bottom')
     mainBox.appendChild(pillarBottom)
-
-
-    // headerImage.src = '/static/pretix_abimania_theme/images/header_background.jpg';
-
-
 
     const headlinesContainer = document.createElement('div');
     headlinesContainer.classList.add('headlines')
