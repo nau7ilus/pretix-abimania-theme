@@ -1,0 +1,49 @@
+{% load static %}
+
+<div id="event-infos">
+  <div class="left"></div>
+
+  <div class="right f-panzoom is-draggable" id="seating-map">
+    <div class="f-custom-controls top-right">
+      <button data-panzoom-action="toggleFS" class="toggleFullscreen">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <g>
+            <path d="M16 4h4m0 0v4m0-4-5 5M8 20H4m0 0v-4m0 4 5-5"></path>
+          </g>
+        </svg>
+      </button>
+    </div>
+
+    <img class="f-panzoom__content" src="{% static 'pretix_abimania_theme/images/plan.svg' %}" alt="Sitzplan Aula" />
+    <div class="f-panzoom can-zoom_in">
+      <div class="f-custom-controls top-right">
+        <button data-panzoom-action="toggleFS" class="toggleFullscreen" aria-label="Toggle fullscreen">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+            <g>
+              <path d="M14.5 9.5 21 3m0 0h-6m6 0v6M3 21l6.5-6.5M3 21v-6m0 6h6"></path>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="f-custom-controls bottom-right">
+      <button data-panzoom-action="zoomIn" class="zoom-button" aria-label="Zoom in">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 5v14M5 12h14"></path>
+        </svg>
+      </button>
+      <button data-panzoom-action="zoomOut" class="zoom-button" aria-label="Zoom out">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M5 12h14"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="{% static 'pretix_abimania_theme/css/abimania.css' %}" />
+<link rel="stylesheet" href="{% static 'pretix_abimania_theme/css/panzoom.css' %}" />
+
+<script src="{% static 'pretix_abimania_theme/js/panzoom.umd.js' %}"></script>
+<script src="{% static 'pretix_abimania_theme/js/seating-map.js' %}"></script>
