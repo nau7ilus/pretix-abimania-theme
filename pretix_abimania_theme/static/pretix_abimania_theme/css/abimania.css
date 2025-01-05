@@ -1,3 +1,66 @@
+@font-face {
+    font-family: 'Satyr SP';
+    src: url('/static/pretix_abimania_theme/fonts/SatyrSPRegular.woff2') format('woff2'),
+        url('/static/pretix_abimania_theme/fonts/SatyrSPRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alegreya SC';
+    src: url('AlegreyaSC-Regular.woff2') format('woff2'),
+        url('AlegreyaSC-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* .main-box::before {
+    content: '';
+    width: 50px;
+    height: 35px;
+    background-image: url('/static/pretix_abimania_theme/images/pillar_top.png');
+    position: relative;
+    left: -40px;
+    background-size: cover;
+} */
+
+.main-box {
+    position: relative;
+}
+
+/* .main-box::before,
+.main-box::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 50px;
+} */
+
+.main-box::before {
+    height: 5px;
+    content: '';
+    width: 50px;
+    top: 50px;
+    display: block;
+    /* Высота верхней части */
+    bottom: 50px;
+    /* Высота нижней части */
+    background: url('/static/pretix_abimania_theme/images/pillar_middle.svg') repeat-y;
+}
+
+/* .main-box::after {
+    content: '';
+    width: 50px;
+    height: 35px;
+    background-image: url('/static/pretix_abimania_theme/images/pillar_top.png');
+    position: relative;
+    left: -40px;
+} */
+
 #event-infos {
     display: flex;
 }
@@ -65,4 +128,47 @@
 
 .f-custom-controls button[disabled] svg {
     opacity: .7
+}
+
+.page-header::before {
+    content: '';
+    width: 100%;
+    height: 2rem;
+    background-image: url('/static/pretix_abimania_theme/images/ornament.svg');
+    position: absolute;
+    top: 0.5rem;
+    background-repeat: space;
+}
+
+.page-header {
+    position: relative;
+    height: 13rem;
+    background-size: cover;
+    background-image: url('/static/pretix_abimania_theme/images/header_background.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headlines {
+    color: #fff;
+    text-align: center;
+    line-height: normal;
+    margin-top: 3rem;
+}
+
+.headlines>* {
+    margin: 0;
+    padding: 0;
+}
+
+.headlines>h1 {
+    font-family: 'Satyr SP';
+    font-size: 6rem;
+}
+
+.headlines>h4 {
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: -0.5rem;
 }

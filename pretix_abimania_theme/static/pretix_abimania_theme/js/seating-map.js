@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const seatingMap = document.getElementById("seating-map");
-    const panzoomOptions = { click: false, minScale: 1.25, maxScale: 1.5 };
+    const panzoomOptions = { click: false, maxScale: 1.5 };
 
     new Panzoom(seatingMap, panzoomOptions);
 });
