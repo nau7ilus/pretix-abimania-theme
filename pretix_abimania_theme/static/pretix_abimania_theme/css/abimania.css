@@ -7,16 +7,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Alegreya SC';
-    src: url('AlegreyaSC-Regular.woff2') format('woff2'),
-        url('AlegreyaSC-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-
 
 /* .main-box::before {
     content: '';
